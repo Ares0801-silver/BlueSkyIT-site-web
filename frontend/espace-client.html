@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon espace — Blue Sky IT</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="header-mount"></div>
+
+<main class="dash-shell">
+  <div class="container">
+    <div class="dash-header">
+      <div class="dash-welcome">
+        <span class="eyebrow">● Espace client</span>
+        <h1 style="font-size:1.8rem;margin-top:8px;">Bonjour, <span id="userName">…</span></h1>
+      </div>
+      <button class="btn btn-outline" id="logoutBtn">Se déconnecter</button>
+    </div>
+
+    <div class="dash-grid">
+      <div class="dash-card">
+        <h3>Mon compte</h3>
+        <p class="small">Adresse e-mail : <span id="userEmail">…</span></p>
+        <span class="status-pill">Compte actif</span>
+      </div>
+      <div class="dash-card">
+        <h3>Mes demandes</h3>
+        <p class="small">Le suivi détaillé des demandes de maintenance sera bientôt disponible ici.</p>
+      </div>
+      <div class="dash-card">
+        <h3>Besoin d'aide ?</h3>
+        <p class="small">Contactez directement l'équipe Blue Sky IT pour toute question.</p>
+        <a href="contact.html" class="btn btn-outline" style="margin-top:8px;">Contacter le support</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="footer-mount"></div>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script>
+  mountLayout('');
+  guardDashboard();
+</script>
+</body>
+</html>

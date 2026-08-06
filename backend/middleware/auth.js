@@ -1,0 +1,11 @@
+// ============================================================
+// Middleware — vérifie qu'une session utilisateur est active
+// ============================================================
+function requireAuth(req, res, next) {
+  if (req.session && req.session.userId) {
+    return next();
+  }
+  return res.status(401).json({ error: 'Non authentifié.' });
+}
+
+module.exports = { requireAuth };

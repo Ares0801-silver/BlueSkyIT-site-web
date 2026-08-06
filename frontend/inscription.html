@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créer un compte — Espace client Blue Sky IT</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="header-mount"></div>
+
+<main class="auth-shell">
+  <div class="auth-box">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Blue Sky IT" style="height:34px;width:auto;">
+    </div>
+    <h1>Créer un compte</h1>
+    <p class="auth-sub small">Accédez à votre espace client Blue Sky IT.</p>
+
+    <div class="form-card">
+      <div id="formAlert" class="form-alert"></div>
+      <form id="registerForm" novalidate>
+        <div class="form-row" id="row-name">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" maxlength="100" required autocomplete="name">
+          <span class="form-error">Merci d'indiquer votre nom.</span>
+        </div>
+        <div class="form-row" id="row-email">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" maxlength="150" required autocomplete="email">
+          <span class="form-error">Adresse e-mail invalide.</span>
+        </div>
+        <div class="form-row" id="row-password">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" required autocomplete="new-password" minlength="10">
+          <div class="pw-strength"><span id="pwBar"></span></div>
+          <span class="hint" id="pwHint">Au moins 10 caractères, avec majuscule, chiffre et symbole recommandés.</span>
+          <span class="form-error">Le mot de passe doit contenir au moins 10 caractères.</span>
+        </div>
+        <div class="form-row" id="row-password2">
+          <label for="password2">Confirmer le mot de passe</label>
+          <input type="password" id="password2" name="password2" required autocomplete="new-password">
+          <span class="form-error">Les mots de passe ne correspondent pas.</span>
+        </div>
+        <div class="form-row" id="row-consent">
+          <label class="form-checkbox">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>J'accepte la <a href="politique-confidentialite.html" target="_blank">politique de confidentialité</a> de Blue Sky IT.</span>
+          </label>
+          <span class="form-error">Le consentement est requis pour créer un compte.</span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Créer mon compte</button>
+      </form>
+      <p class="auth-switch">Déjà un compte ? <a href="connexion.html">Se connecter</a></p>
+    </div>
+  </div>
+</main>
+
+<div id="footer-mount"></div>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script>
+  mountLayout('');
+  initRegisterForm();
+</script>
+</body>
+</html>
